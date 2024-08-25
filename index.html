@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Texto</title>
+</head>
+
+<body>
+    
+    <header id="header" class="header">
+        <h1 id="titulo"></h1>
+    </header>
+    <div class="container">   
+        <main class="main">
+            <textarea name="encriptar" id="encriptarTexto" class="encriptar__texto" placeholder="Ingrese el texto aquí"
+               "></textarea>
+            <div class="container__botones">
+                <div class="advertencia">
+                    <img src="img/signo-de-exclamacion.png" alt="advertir" class="advertencia__signo">
+                    <p id="advertencia__texto" class="advertencia__texto"></p>
+                </div>
+                <div class="botones">
+                    <button id="btnEncriptar" class="btn__encriptar" onclick="btnEncriptarTexto()">Encriptar</button>
+                    <button id="btnDesencriptar" class="btn__desencriptar"
+                        onclick="btnDesencriptarTexto()">Desencriptar</button>
+                </div>
+            </div>
+        </main>
+        <aside class="aside">
+            <textarea name="" id="desencriptarTexto" class="desencriptar__texto" oninput="autoResize(this)"></textarea>
+            <div class="mensaje">
+                <img id="miImagen" src="img/cifrado.gif" alt="cifrado" class="image__desencriptador">
+                <p id="anuncioMensaje" class="anuncio__mensaje"></p>
+                <p id="anuncioTexto" class="anuncio__texto"></p>
+            </div>
+            <div class="btn__copiar">
+                <button id="btnCopiar" class="btn__copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </aside>
+    </div>
+        <footer>
+            <p>©2024 | Proyecto creado por YAN CARLOS MACHADO DURANGO</p>
+        </footer>
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
